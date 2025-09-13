@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+langchain
+langchain-community
+langchain-core
+chromadb
+pydantic
+sentence-transformers
+transformers
+huggingface-hub
+passlib[bcrypt]          # for hashing passwords
+python-jose[cryptography]  # for JWT tokens
+python-multipart          # already there, for file uploads
+sqlmodel
+pypdf
+numpy

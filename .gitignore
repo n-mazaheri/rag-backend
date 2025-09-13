@@ -1,0 +1,29 @@
+# Python cache / build files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+
+# Virtual environment
+venv/
+.env/
+
+# Environment variables
+.env
+
+# Uploaded files
+uploads/
+
+# Chroma database
+chroma_db/
+
+# IDE/editor configs (optional, but useful to ignore)
+.vscode/
+.idea/
+*.swp
+
+# SQLite DB
+*.db
+*.sqlite3
