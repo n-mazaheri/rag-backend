@@ -1,3 +1,13 @@
+---
+title: ContextAI
+emoji: 🤖
+colorFrom: blue
+colorTo: green
+sdk: docker
+sdk_version: "1.0"
+app_file: app.main
+pinned: false
+---
 # ContextAI
 
 A **FastAPI-based RAG application** that lets users upload documents (PDF/TXT) and ask questions.  
