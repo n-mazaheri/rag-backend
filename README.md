@@ -3,55 +3,55 @@
 A **FastAPI-based RAG application** that lets users upload documents (PDF/TXT) and ask questions.  
 Powered by **LangChain**, **ChromaDB**, and **LLMs** for context-aware answers.
 
-📚 FastAPI RAG App with LangChain, ChromaDB & Authentication
+## 📚 FastAPI RAG App with LangChain, ChromaDB & Authentication
 
 This project is a Retrieval-Augmented Generation (RAG) web application built with FastAPI.
 It allows users to:
 
-🔑 Sign up / Sign in (JWT-based authentication)
+- 🔑 Sign up / Sign in (JWT-based authentication)
 
-📂 Upload PDF or text documents
+- 📂 Upload PDF or text documents
 
-🧠 Store document embeddings in ChromaDB (vector database)
+- 🧠 Store document embeddings in ChromaDB (vector database)
 
-💬 Ask questions about uploaded documents
+- 💬 Ask questions about uploaded documents
 
-⚡ Get context-aware answers powered by LangChain + LLMs (via OpenRouter
+- ⚡ Get context-aware answers powered by LangChain + LLMs (via OpenRouter
 )
 
-🚀 Features
+## 🚀 Features
 
-User authentication with access & refresh tokens
+- User authentication with access & refresh tokens
 
-Secure file uploads (.pdf, .txt)
+- Secure file uploads (.pdf, .txt)
 
-Automatic text chunking & embedding with HuggingFace models
+- Automatic text chunking & embedding with HuggingFace models
 
-Persistent vector store using ChromaDB
+- Persistent vector store using ChromaDB
 
-RAG pipeline with LangChain’s RetrievalQA
+- RAG pipeline with LangChain’s RetrievalQA
 
-OpenRouter integration for running LLM queries
+- OpenRouter integration for running LLM queries
 
-CORS configured for frontend integration
+- CORS configured for frontend integration
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-FastAPI
+- FastAPI
 
-LangChain
+- LangChain
 
-ChromaDB
+- ChromaDB
 
-SQLModel
- for user database
+- SQLModel
+- -  for user database
 
-HuggingFace Embeddings
+- HuggingFace Embeddings
 
-OpenRouter
- (for LLM access)
+- OpenRouter
+- -  (for LLM access)
 
-📂 Project Structure
+## 📂 Project Structure
 app/
  ├── main.py          # FastAPI routes & entrypoint
  ├── rag.py           # RAG pipeline (embeddings, vector store, QA chain)
@@ -62,66 +62,64 @@ app/
 uploads/              # User uploaded files (ignored in Git)
 chroma_db/            # Vector DB storage (ignored in Git)
 
-⚙️ Setup & Installation
-1️⃣ Clone the repo
-git clone https://github.com/your-username/fastapi-rag-app.git
-cd fastapi-rag-app
+## ⚙️ Setup & Installation
+- 1️⃣ Clone the repo
+- - git clone https://github.com/your-username/fastapi-rag-app.git
+- - cd fastapi-rag-app
 
-2️⃣ Create & activate virtual environment
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
+- 2️⃣ Create & activate virtual environment
+- - python -m venv venv
+- - source venv/bin/activate   # Linux/Mac
+- - venv\Scripts\activate      # Windows
 
-3️⃣ Install dependencies
-pip install -r requirements.txt
+- 3️⃣ Install dependencies
+- - pip install -r requirements.txt
 
-4️⃣ Configure environment variables
+- 4️⃣ Configure environment variables
 
-Create a .env file in the project root (or copy from .env.example):
+- - Create a .env file in the project root (or copy from .env.example):
 
-# OpenRouter
-OPENROUTER=your_openrouter_api_key_here
+- - ### OpenRouter
+- - OPENROUTER=your_openrouter_api_key_here
 
-# JWT secret
-SECRET_KEY=your_super_secret_key
+- - ### JWT secret
+- - SECRET_KEY=your_super_secret_key
 
-⚠️ Never commit your real .env file.
+- - ⚠️ Never commit your real .env file.
 
-▶️ Run the App
+- ▶️ Run the App
 
-Start the FastAPI server:
+- - Start the FastAPI server:
 
-uvicorn app.main:app --reload
+- - uvicorn app.main:app --reload
 
 
-The API will be available at:
-👉 http://127.0.0.1:8000
+- - The API will be available at:
+- - - 👉 http://127.0.0.1:8000
 
-Interactive API docs:
-👉 http://127.0.0.1:8000/docs
 
-🔑 Authentication Flow
+- ## 🔑 Authentication Flow
 
-Signup → POST /signup with username & password
+- - Signup → POST /signup with username & password
 
-Signin → POST /signin to receive access_token & refresh_token
+- - Signin → POST /signin to receive access_token & refresh_token
 
-Use Authorization: Bearer <access_token> for protected endpoints
+- - Use Authorization: Bearer <access_token> for protected endpoints
 
-📂 Document Workflow
+- ## 📂 Document Workflow
 
-User logs in
+- - User logs in
 
-Upload document → POST /upload (PDF or TXT)
+- - Upload document → POST /upload (PDF or TXT)
 
-Ask a question → GET /ask?q=your+question
+- - Ask a question → GET /ask?q=your+question
 
-The system searches your embeddings in ChromaDB and queries the LLM with context
+- - The system searches your embeddings in ChromaDB and queries the LLM with context
 
-📝 Notes
+- ## 📝 Notes
 
-uploads/ and chroma_db/ are auto-created at runtime if they don’t exist.
+- - uploads/ and chroma_db/ are auto-created at runtime if they don’t exist.
 
-Both folders are ignored by Git (runtime data only).
+- - Both folders are ignored by Git (runtime data only).
 
-Contributions & pull requests are welcome 🚀
+- - Contributions & pull requests are welcome 🚀

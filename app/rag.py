@@ -8,9 +8,11 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.document_loaders import TextLoader
 from langchain.document_loaders import PyPDFLoader
 from langchain.text_splitter import CharacterTextSplitter
-from app.config import CHROMA_DB_DIR
+from app.config import CHROMA_DB_DIR, EMBEDDING_MODEL
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import RetrievalQA
+from langchain.docstore.document import Document
+
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -23,7 +25,6 @@ embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
 # Chroma DB
 db = Chroma(persist_directory=CHROMA_DB_DIR, embedding_function=embeddings)
 
-from langchain.docstore.document import Document
 
 def add_document(file_path: str, user_id: str):
     # Load file
