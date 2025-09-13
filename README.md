@@ -63,48 +63,48 @@ uploads/              # User uploaded files (ignored in Git)
 chroma_db/            # Vector DB storage (ignored in Git)
 
 ## ⚙️ Setup & Installation
-- 1️⃣ Clone the repo
-- - git clone https://github.com/your-username/fastapi-rag-app.git
-- - cd fastapi-rag-app
+1️⃣ Clone the repo
+  - git clone https://github.com/your-username/fastapi-rag-app.git
+  - cd fastapi-rag-app
 
-- 2️⃣ Create & activate virtual environment
-- - python -m venv venv
-- - source venv/bin/activate   # Linux/Mac
-- - venv\Scripts\activate      # Windows
+2️⃣ Create & activate virtual environment
+  - python -m venv venv
+  - source venv/bin/activate   # Linux/Mac
+  - venv\Scripts\activate      # Windows
 
-- 3️⃣ Install dependencies
-- - pip install -r requirements.txt
+3️⃣ Install dependencies
+  - pip install -r requirements.txt
 
-- 4️⃣ Configure environment variables
+4️⃣ Configure environment variables
 
-- - Create a .env file in the project root (or copy from .env.example):
+  - Create a .env file in the project root (or copy from .env.example):
 
-- - ### OpenRouter
-- - OPENROUTER=your_openrouter_api_key_here
+  - ### OpenRouter
+  - OPENROUTER=your_openrouter_api_key_here
 
-- - ### JWT secret
-- - SECRET_KEY=your_super_secret_key
+  - ### JWT secret
+  - SECRET_KEY=your_super_secret_key
 
-- - ⚠️ Never commit your real .env file.
+  - ⚠️ Never commit your real .env file.
 
-- ▶️ Run the App
+▶️ Run the App
 
-- - Start the FastAPI server:
+  - Start the FastAPI server:
 
-- - uvicorn app.main:app --reload
+  - uvicorn app.main:app --reload
 
 
-- - The API will be available at:
-- - - 👉 http://127.0.0.1:8000
+  - The API will be available at:
+    - 👉 http://127.0.0.1:8000
 
 
 ## 🔑 Authentication Flow
 
-- - Signup → POST /signup with username & password
+  - Signup → POST /signup with username & password
 
-- - Signin → POST /signin to receive access_token & refresh_token
+  - Signin → POST /signin to receive access_token & refresh_token
 
-- - Use Authorization: Bearer <access_token> for protected endpoints
+  - Use Authorization: Bearer <access_token> for protected endpoints
 
 ## 📂 Document Workflow
 
