@@ -1,7 +1,7 @@
 import os
 
 # Embedding model
-EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
+EMBEDDING_MODEL = "./embedding_model"  # path to local folder
 
 # Vector DB storage
 CHROMA_DB_DIR = "./chroma_db"
