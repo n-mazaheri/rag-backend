@@ -44,14 +44,15 @@ It allows users to:
 - ChromaDB
 
 - SQLModel
-- -  for user database
+  -  for user database
 
 - HuggingFace Embeddings
 
 - OpenRouter
-- -  (for LLM access)
+  -  (for LLM access)
 
 ## 📂 Project Structure
+````` ```````
 app/
  ├── main.py          # FastAPI routes & entrypoint
  ├── rag.py           # RAG pipeline (embeddings, vector store, QA chain)
@@ -61,6 +62,7 @@ app/
  └── config.py        # Settings & constants
 uploads/              # User uploaded files (ignored in Git)
 chroma_db/            # Vector DB storage (ignored in Git)
+````` ```````
 
 ## ⚙️ Setup & Installation
 1️⃣ Clone the repo
