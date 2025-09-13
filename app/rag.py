@@ -18,9 +18,9 @@ from dotenv import load_dotenv
 load_dotenv()
 OPENAI_ROUTER_TOKEN=os.getenv("OPENROUTER")
 
-# Set a writable cache directory inside your container
-os.environ["TRANSFORMERS_CACHE"] = "/app/.cache"
-os.makedirs("/app/.cache", exist_ok=True)
+# Set a writable cache directory
+os.environ["TRANSFORMERS_CACHE"] = "/tmp/.cache"
+os.makedirs("/tmp/.cache", exist_ok=True)
 
 # Embeddings
 embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
