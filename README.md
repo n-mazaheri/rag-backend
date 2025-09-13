@@ -98,7 +98,7 @@ chroma_db/            # Vector DB storage (ignored in Git)
 - - - 👉 http://127.0.0.1:8000
 
 
-- ## 🔑 Authentication Flow
+## 🔑 Authentication Flow
 
 - - Signup → POST /signup with username & password
 
@@ -106,20 +106,20 @@ chroma_db/            # Vector DB storage (ignored in Git)
 
 - - Use Authorization: Bearer <access_token> for protected endpoints
 
-- ## 📂 Document Workflow
+## 📂 Document Workflow
 
-- - User logs in
+- User logs in
 
-- - Upload document → POST /upload (PDF or TXT)
+- Upload document → POST /upload (PDF or TXT)
 
-- - Ask a question → GET /ask?q=your+question
+- Ask a question → GET /ask?q=your+question
 
-- - The system searches your embeddings in ChromaDB and queries the LLM with context
+- The system searches your embeddings in ChromaDB and queries the LLM with context
 
-- ## 📝 Notes
+## 📝 Notes
 
-- - uploads/ and chroma_db/ are auto-created at runtime if they don’t exist.
+- uploads/ and chroma_db/ are auto-created at runtime if they don’t exist.
 
-- - Both folders are ignored by Git (runtime data only).
+- Both folders are ignored by Git (runtime data only).
 
-- - Contributions & pull requests are welcome 🚀
+- Contributions & pull requests are welcome 🚀
