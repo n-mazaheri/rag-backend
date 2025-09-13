@@ -52,7 +52,7 @@ It allows users to:
   -  (for LLM access)
 
 ## 📂 Project Structure
-````` ```````
+`````
 app/
  ├── main.py          # FastAPI routes & entrypoint
  ├── rag.py           # RAG pipeline (embeddings, vector store, QA chain)
@@ -62,7 +62,7 @@ app/
  └── config.py        # Settings & constants
 uploads/              # User uploaded files (ignored in Git)
 chroma_db/            # Vector DB storage (ignored in Git)
-````` ```````
+`````
 
 ## ⚙️ Setup & Installation
 1️⃣ Clone the repo
@@ -87,7 +87,7 @@ chroma_db/            # Vector DB storage (ignored in Git)
   - ### JWT secret
   - SECRET_KEY=your_super_secret_key
 
-  - ⚠️ Never commit your real .env file.
+⚠️ Never commit your real .env file.
 
 ▶️ Run the App
 
