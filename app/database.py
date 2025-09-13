@@ -1,6 +1,6 @@
 from sqlmodel import SQLModel, create_engine, Session
 
-DATABASE_URL = "sqlite:///./users.db"
+DATABASE_URL = "sqlite:////tmp/users.db"
 engine = create_engine(DATABASE_URL, echo=True)
 
 def init_db():
