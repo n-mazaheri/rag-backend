@@ -4,6 +4,9 @@ FROM python:3.12-slim
 # Set working directory
 WORKDIR /app
 
+ENV TRANSFORMERS_CACHE=/tmp/.cache
+RUN mkdir -p /tmp/.cache && chmod -R 777 /tmp/.cache
+
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \
