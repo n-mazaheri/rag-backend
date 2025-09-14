@@ -56,7 +56,7 @@ def protected_route(current_user: User = Depends(get_current_user)):
 @app.post("/upload")
 def upload_file(file: UploadFile = File(...), current_user: User = Depends(get_current_user)):
     user_id = current_user.username
-    file_path = f"./uploads/{file.filename}"
+    file_path = f"/tmp/uploads/{file.filename}"
     with open(file_path, "wb") as f:
         shutil.copyfileobj(file.file, f)
     rag.add_document(file_path, user_id=user_id)
