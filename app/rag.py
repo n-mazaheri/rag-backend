@@ -23,7 +23,7 @@ os.environ["TRANSFORMERS_CACHE"] = "/tmp/.cache"
 os.makedirs("/tmp/.cache", exist_ok=True)
 
 # Embeddings
-embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL,huggingfacehub_api_token=HUGGINGFACETOEN)
+embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
 
 # Chroma DB
 db = Chroma(persist_directory=CHROMA_DB_DIR, embedding_function=embeddings)
