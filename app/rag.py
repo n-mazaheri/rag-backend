@@ -17,13 +17,13 @@ from langchain.docstore.document import Document
 from dotenv import load_dotenv
 load_dotenv()
 OPENAI_ROUTER_TOKEN=os.getenv("OPENROUTER")
-
+HUGGINGFACETOEN=os.getenv("HUGGINGFACETOEN")
 # Set a writable cache directory
 os.environ["TRANSFORMERS_CACHE"] = "/tmp/.cache"
 os.makedirs("/tmp/.cache", exist_ok=True)
 
 # Embeddings
-embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL,huggingfacehub_api_token='API_TOKEN')
 
 # Chroma DB
 db = Chroma(persist_directory=CHROMA_DB_DIR, embedding_function=embeddings)
