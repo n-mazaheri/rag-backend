@@ -13,6 +13,11 @@ pinned: false
 A **FastAPI-based RAG application** that lets users upload documents (PDF/TXT) and ask questions.  
 Powered by **LangChain**, **ChromaDB**, and **LLMs** for context-aware answers.
 
+## 🚀 Live Demo
+
+[![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen?style=for-the-badge)](https://rag-frontend-1y5k.onrender.com)
+
+
 ## 📚 FastAPI RAG App with LangChain, ChromaDB & Authentication
 
 This project is a Retrieval-Augmented Generation (RAG) web application built with FastAPI.
